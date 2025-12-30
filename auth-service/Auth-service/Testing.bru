@@ -1,0 +1,15 @@
+meta {
+  name: Testing
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:8082/allocation/ping
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

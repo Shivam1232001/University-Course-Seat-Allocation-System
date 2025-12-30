@@ -1,0 +1,15 @@
+meta {
+  name: check Allocation
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://localhost:8082/results/student/101
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

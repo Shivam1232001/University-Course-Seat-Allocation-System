@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: allocation-route
+          uri: http://localhost:8082
+          predicates:
+            - Path=/allocation/**
+
+        - id: results-route
+          uri: http://localhost:8082
+          predicates:
+            - Path=/results/**
+
+
+  logging:
+    level:
+      org.springframework.cloud.gateway: DEBUG
+      reactor.netty.http.client: DEBUG
